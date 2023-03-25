@@ -4,7 +4,11 @@ const cors = require ("cors");
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+	{
+		origin: ["https://localhost:3000" ,"https://mern-todo.onreader.com" ],
+	}
+));
 
 const PORT = 3001;
 
